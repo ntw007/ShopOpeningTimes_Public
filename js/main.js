@@ -26,7 +26,8 @@ function checkIfOpen() {
 
                 document.getElementById('openStatus').innerHTML =  " <span class='status open'>The shop is open.</span>";
             } else {
-                document.getElementById('openStatus').innerHTML =  " <span class='status closed'>The shop is currently closed.</span>";
+                var nextOpen = data.nextOpen;
+                document.getElementById('openStatus').innerHTML =  " <span class='status closed'>The shop is currently closed, and will reopen " + nextOpen + "</span>";
             }
         }});
 };
@@ -51,7 +52,7 @@ function getCurrentTime() {
     }
 
     // Show time
-    document.getElementById("current-time").innerHTML = "<span class='time-title'>Time: </span><span class='time-el'>" + hours + ":" + mins + ":" + secs + "</span>";
+    document.getElementById("current-time").innerHTML = "<span class='time-title'>Time: </span><span class='time-el'>" + hours + ":" + mins + "</span>";
 
     checkIfOpen();
 

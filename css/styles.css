@@ -44,7 +44,7 @@ h1 {
 }
 
 #container .closed {
-    color: red;
+    color: rgb(238, 128, 128);
 }
 
 #container .current-time {

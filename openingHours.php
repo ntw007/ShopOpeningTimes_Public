@@ -41,12 +41,13 @@ class shopOpeningHours implements openingHours {
         $time           = $dateTime->format('H:i');
         $day            = $dateTime->format('D');
         $openingTimes   = self::getOpeningTimes();
+        $nextOpen       = self::nextOpening();
 
         // Compare current time with opening times array 
         if ($time >= $openingTimes[$day]["Open"] && $time < $openingTimes[$day]["Closed"]) {
             return json_encode(['status'=>'true', 'day'=>$day]);
         } else {
-            return json_encode(['status'=>'false', 'day'=>$day]);
+            return json_encode(['status'=>'false', 'day'=>$day, 'nextOpen'=>$nextOpen]);
         }
     }
 
