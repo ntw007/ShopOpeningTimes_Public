@@ -33,7 +33,7 @@
         <div class="description">
             <p>The above display is created using HTML, CSS, JavaScript and PHP. </p>
 
-            <p>The page activity, such as the time ticking by and the updating of the 'open' status, is achieved using JavaScript. The content itself, is gained through PHP classes and methods.</p>
+            <p>The page activity is achieved using JavaScript. The content itself, is gained through PHP classes and methods. AJAX is used to call the PHP methods in real time and update the page asynchronously, to remove the need to reload the page.</p>
 
             <p>The main PHP class implements an Interface. This is not actually necessary for this project, but I added it for demonstration purposes.</p>
         </div>
